@@ -31,7 +31,7 @@
                // Default arguments, these will be overridden by the arguments from the widget api
                $scope.defaultArgs = {
                   'instagram': {
-                     'href': 'https://www.instagram.com/p/BA1wL_MqzTV'
+                     'href': 'https://www.instagram.com/p/BCGuqy1CogW'
                   }
                };
 
@@ -40,7 +40,7 @@
 
                $(window).bind('resize', function() {
                   $scope.width = kwcard.width();
-                  $scope.setWidgetHeight($scope.width + 15);
+                  $scope.setWidgetHeight($scope.width + 80);
                });
 
                // Call the init method in the coreWidgetController so that we setup everything using our overridden values
