@@ -4,11 +4,10 @@
 
    arrDependencies = [
       'widgetCore',
-      'widgetCore.translate',
       'ngAnimate'
    ];
 
-   (function ( $app ) {
+   (function ($app) {
       'use strict';
 
       return $app;
