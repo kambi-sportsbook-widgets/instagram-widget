@@ -1,5 +1,4 @@
 (function () {
-
    'use strict';
 
    var gulp = require('gulp');
@@ -8,8 +7,6 @@
 
    var dir = requireDir('./node_modules/widget-build-tools/');
 
-   // Add or override your gulp tasks here​
-
-   gulp.task('compile-translations', function () { });
+   // Add or override your gulp tasks here
 
 }).call(this);

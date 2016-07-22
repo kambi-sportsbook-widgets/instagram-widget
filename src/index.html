@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app="instagramWidget">
+<html>
 <head>
    <title>Instagram Widget</title>
    <meta charset="UTF-8">
@@ -16,43 +16,51 @@
    <meta name="apple-mobile-web-app-status-bar-style" content="black">
    <meta name="apple-mobile-web-app-title" content="">
 
-   <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900"/>
    <!-- build:css -->
    <!-- This section will be replaced in the gulp build process -->
-   <link rel="stylesheet" type="text/css" href="css/app.css"/>
+   <link rel="stylesheet" type="text/css" href="transpiled/css/app.css"/>
    <!-- endbuild -->
 
-   <script src="//code.jquery.com/jquery-2.2.0.min.js"></script>
-   <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
-   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
-   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-animate.js"></script>
-   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-sanitize.min.js"></script>
-   <!-- build:js -->
+   <link rel="stylesheet" type="text/css" rv-href="widgetCss"/>
+
+   <!--build:euro16versions-->
+   <script src="//kambi-cdn.globalmouth.com/tournamentdata/93/versions/versions.js"></script>
+   <!-- endbuild -->
+
+   <!-- build:third-party-libs -->
+   <script src="https://s3-eu-west-1.amazonaws.com/kambi-widgets/widget-third-party/v1.2.0/thirdparty.js"></script>
+   <!-- endbuild -->
+
+   <!-- build:kambi-widget-api -->
    <!-- This section will be replaced in the gulp build process -->
-   <script src="js/app.js"></script>
-   <script src="js/controllers/appController.js"></script>
+   <script src="https://c3-static.kambi.com/sb-mobileclient/widget-api/1.0.0.13/kambi-widget-api.js"></script>
    <!-- endbuild -->
-
-   <!-- build:corelib -->
-   <!-- This section will be replaced in the gulp build process -->
-   <script src="../node_modules/kambi-sportsbook-widget-library/src/js/controllers/widgetCoreController.js"></script>
-   <script src="../node_modules/kambi-sportsbook-widget-library/src/js/services/kambiWidgetService.js"></script>
-   <script src="../node_modules/kambi-sportsbook-widget-library/src/js/services/kambiAPIService.js"></script>
-   <script src="../node_modules/kambi-sportsbook-widget-library/src/js/services/coreUtilsService.js"></script>
-   <!-- endbuild -->
-
-   <script src="https://c3-static.kambi.com/sb-mobileclient/widget-api/1.0.0.8/kambi-widget-api.js"></script>
 </head>
 
 <body class="kw-body">
-<div class="instagram kw-card l-flexbox l-vertical l-expander" ng-controller="appController">
+<div class="instagram kw-card l-flexbox l-vertical l-expander">
 
    <!--Main-->
    <main>
-      <iframe ng-src="{{args.instagram.href}}" frameborder="0" scrolling="no"></iframe>
+      <iframe rv-src="iframeUrl" frameborder="0" scrolling="no"></iframe>
    </main>
 
 </div>
+
+<!-- build:js -->
+<!-- This section will be replaced in the gulp build process -->
+<script src="/node_modules/widget-core-library/src/transpiled/js/coreLibrary.js"></script>
+<script src="/node_modules/widget-core-library/src/transpiled/js/Module/utilModule.js"></script>
+<script src="/node_modules/widget-core-library/src/transpiled/js/Module/widgetModule.js"></script>
+<script src="/node_modules/widget-core-library/src/transpiled/js/Module/offeringModule.js"></script>
+<script src="/node_modules/widget-core-library/src/transpiled/js/Module/statisticsModule.js"></script>
+<script src="/node_modules/widget-core-library/src/transpiled/js/Module/translationModule.js"></script>
+<script src="/node_modules/widget-core-library/src/transpiled/js/Component/Component.js"></script>
+<script>
+   CoreLibrary.development = true;
+</script>
+
+<script src="transpiled/js/app.js"></script>
+<!-- endbuild -->
 </body>
 </html>
