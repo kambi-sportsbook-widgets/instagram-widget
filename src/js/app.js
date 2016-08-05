@@ -5,9 +5,7 @@
 
       defaultArgs: {
          widgetTrackingName: 'instagram',
-         instagram: {
-            href: 'https://www.instagram.com/p/BARTu05AvwB'
-         }
+         instagramUrl: 'https://www.instagram.com/p/BARTu05AvwB'
       },
 
       constructor () {
@@ -23,7 +21,7 @@
             this.setHeight();
          };
          var instagramApiUrl = '//api.instagram.com/publicapi/oembed/?url=';
-         instagramApiUrl += this.scope.args.instagram.href;
+         instagramApiUrl += this.scope.args.instagramUrl;
          instagramApiUrl += '/&callback=instagramCallback';
 
          var script = document.createElement('script');
@@ -37,7 +35,12 @@
             this.setHeight();
          });
 
-         this.scope.iframeUrl = this.scope.args.instagram.href + '/embed';
+         var iframeUrl = this.scope.args.instagramUrl;
+         if (iframeUrl.indexOf('/embed') < -5) {
+            this.scope.iframeUrl = iframeUrl;
+         } else {
+            this.scope.iframeUrl = iframeUrl + '/embed/';
+         }
       },
 
       setHeight () {
