@@ -4,7 +4,6 @@
    var InstagramWidget = CoreLibrary.Component.subclass({
 
       defaultArgs: {
-         widgetTrackingName: 'instagram',
          instagramUrl: 'https://www.instagram.com/p/BARTu05AvwB'
       },
 
@@ -13,8 +12,6 @@
       },
 
       init () {
-         CoreLibrary.setWidgetTrackingName(this.scope.args.widgetTrackingName);
-
          window.instagramCallback = (data) => {
             this.pictureWidth = data.thumbnail_width;
             this.pictureHeight = data.thumbnail_height;

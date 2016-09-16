@@ -1,37 +1,20 @@
 # instagram-widget
 
+![](https://github.com/kambi-sportsbook-widgets/instagram-widget/blob/master/screenshot.jpg?raw=true)
+
 A widget to display an Instagram post
 
-## Configuration example:
+## Configuration
 
-__`client-widgets.js`__
-
+Arguments and default values:
 ```json
-
-...
 {
-    "order": 1,
-    "widgetId": "Instagram widget",
-    "args": {
-        "instagram": {
-            "href": "https://www.instagram.com/p/BA1wL_MqzTV"
-        }
-    }
-},
-...
-
+    "href": "https://www.instagram.com/p/BA1wL_MqzTV"
+}
 ```
 
-Please visit http://widgets.kambi.com/tool/ for more info
+1. href - string - the URL for the instagram post to show
 
-### The widget accepts the following parameter/s:
+### Build Instructions
 
-# Other tools
-
-For setting up sass maps, follow this tutorial https://www.hackmonkey.com/2014/sep/configuring-css-source-maps-compass
-
-To use Scss Lint, run "gem install scss_lint"
-
-# Changelog
-
-changelog can be found [here](CHANGELOG.md)
+Please refer to the [core-library](https://github.com/kambi-sportsbook-widgets/widget-core-library)
